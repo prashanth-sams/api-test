@@ -7,7 +7,7 @@
 2. Login Jenkins:
 
       > username: `admin` | password: `admin`
-3. Execute pipeline project
+3. Execute the pipeline project
 
       http://18.215.244.19:8080/blue/organizations/jenkins/assessment-pipeline/activity
 

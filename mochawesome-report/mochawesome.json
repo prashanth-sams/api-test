@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-02-26T21:47:09.303Z",
+    "end": "2021-02-26T21:47:11.041Z",
+    "duration": 1738,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3785ba3f-ae19-4081-8aab-a972f27dd4f4",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "62f3be5d-e7e6-4353-8f5c-6987e9c12ecc",
+          "title": "Interview API",
+          "fullFile": "/Users/prashanthsams/Documents/Assessment/test/candidate.test.js",
+          "file": "/test/candidate.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "8a802764-8ed4-4a58-ada6-c489792adefc",
+              "title": "GET /candidate",
+              "fullFile": "/Users/prashanthsams/Documents/Assessment/test/candidate.test.js",
+              "file": "/test/candidate.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [],
+              "suites": [
+                {
+                  "uuid": "0017cbe8-450c-4a30-8328-0128d8a77ecc",
+                  "title": "validate response JSON schema",
+                  "fullFile": "/Users/prashanthsams/Documents/Assessment/test/candidate.test.js",
+                  "file": "/test/candidate.test.js",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "should return an array of candidates",
+                      "fullTitle": "Interview API GET /candidate validate response JSON schema should return an array of candidates",
+                      "timedOut": false,
+                      "duration": 1729,
+                      "state": "passed",
+                      "speed": "slow",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": null,
+                      "code": "request\n  .get('/api/candidate')\n  .expect(function(res) {\n    var schema = JSON.parse(fs.readFileSync('./test/data/schema.json'));\n    assert.equal(validate(res.body, schema).errors.length, 0);\n    const latitude = [ 25.357119, 24.058611, 25.259933, 24.863075, 25.087942, 25.21768, 25.18561, 25.089575, 24.487249, 25.089718, 25.088907, 25.199514, 25.197525, 24.418612, 24.421555, 25.266666, 25.800694, 24.184843, 25.322327, 24.466667, 24.2075, 25.276987, 25.392134, 25.0963, 25.068422, 25.068983, 25.088713, 25.173683, 25.069872, 25.184242, 24.332018, 25.134415, 25.22053, 25.308014, 25.267906, 25.11894, 25.0939016825397, 25.0988686188331, 25.1038355551266, 25.10880249142, 25.1137694277134, 25.1187363640069, 24.1237033003003, 24.418612, 24.421555, 25.266666, 24.800694, 24.184843, 24.322327, 24.466667 ];\n    const longitude = [ 55.391068, 55.7775, 55.322769, 55.052059, 55.147499, 55.283546, 55.258133, 55.147846, 54.357464, 55.150646, 55.148571, 55.277397, 55.274288, 54.434723, 54.576599, 55.316666, 55.9762, 54.499901, 55.513641, 54.366669, 55.74472, 55.296249, 55.439693, 55.166893, 55.142982, 55.141205, 55.146679, 55.404945, 55.172516, 55.27243, 54.534374, 55.245258, 55.419472, 55.411171, 55.323158, 55.183552, 55.3175031507937, 55.3297002597154, 55.3418973686371, 55.3540944775588, 55.3662915864806, 55.3784886954023, 54.434723, 54.576599, 55.316666, 55.9762, 54.899901, 55.513641, 54.366669, 55.74472 ];\n    res.body.map((item, index) => {\n      assert.notEqual(item.lat, null)\n      assert.equal(item.lat, latitude[index]);\n      assert.equal((typeof item.lat), 'number');\n      assert.match(item.lat.toString(), /^[+-]?([0-9]*[.])?[0-9]+$/);\n      \n      assert.notEqual(item.lng, null)\n      assert.equal((typeof item.lng), 'number');\n      assert.equal(item.lng, longitude[index]);\n      assert.match(item.lng.toString(), /^[+-]?([0-9]*[.])?[0-9]+$/);\n    });\n    const location = [ \"Rolla, Sharjah, the UAE\", \"Jebel Hafeet Mountain Road, UAE\", \"Al Maktoum Rd, Dubai, United Arab Emirates\", \"Al Marai Road, Dubai, United Arab Emirates\", \"The Marina Torch, Dubai, United Arab Emirates\", \"Emirates Office Tower, Dubai, UAE\", \"JW Marriott Marquis Dubai, Busines Bay, Dubai, UAE\", \"Elite Residence, Dubai, United Arab Emirates\", \"World Trade Center Abu Dhabi, Abu Dhabi, United Arab Emirates\", \"23 Marina, Dubai, United Arab Emirates\", \"Marina 101, Dubai Marina, Dubai, United Arab Emirates\", \"Dubai Mall, Dubai, United Arab Emirates\", \"Burj Khalifa, Dubai, United Arab Emirates\", \"Capital Gate, Abu Dhabi, United Arab Emirates\", \"Khalifa City, Abu Dhabi, United Arab Emirates\", \"Deira, Dubai, United Arab Emirates\", \"Ras Al-Khaimah, Ras al Khaimah, United Arab Emirates\", \"Al Dhafra, Abu Dhabi, United Arab Emirates\", \"Sharjah, United Arab Emirates\", \"Abu Dhabi, United Arab Emirates\", \"Al Ain, United Arab Emirates\", \"Dubai, United Arab Emirates\", \"Grand Office Tower Rashidiya, Ajman, the UAE\", \"The Onyx Tower 2, Dubai City, Dubai, the UAE\", \"AG Tower, Dubai, United Arab Emirates\", \"Almas Tower, Dubai, United Arab Emirates\", \"Princess Tower, Dubai Marina, Dubai, United Arab Emirates\", \"England Cluster, International City, Dubai, UAE\", \"Emirates Hills, Dubai, United Arab Emirates\", \"Business Bay, Dubai, United Arab Emirates\", \"Mussafah Community, Abu Dhabi, United Arab Emirates\", \"Al Quoz Industrial Area 2, Dubai, United Arab Emirates\", \"Mirdif, Dubai, UAE\", \"Industrial Area 3 - Sharjah - United Arab Emirates\", \"Al Muraqqabat, Dubai, United Arab Emirates\", \"Al Sufouh, Dubai, United Arab Emirates\", \"Rolla, Sharjah, the UAE\", \"Jebel Hafeet Mountain Road, UAE\", \"Al Maktoum Rd, Dubai, United Arab Emirates\", \"Al Marai Road, Dubai, United Arab Emirates\", \"The Marina Torch, Dubai, United Arab Emirates\", \"Emirates Office Tower, Dubai, UAE\", \"JW Marriott Marquis Dubai, Busines Bay, Dubai, UAE\", \"Elite Residence, Dubai, United Arab Emirates\", \"World Trade Center Abu Dhabi, Abu Dhabi, United Arab Emirates\", \"24 Marina, Dubai, United Arab Emirates\", \"Marina 101, Dubai Marina, Dubai, United Arab Emirates\", \"Rolla, Sharjah, the UAE\", \"Jebel Hafeet Mountain Road, UAE\", \"Al Maktoum Rd, Dubai, United Arab Emirates\" ];\n    \n    let len = 0;\n    _.each(res.body, (item) => {\n      assert.equal(item.location, location[len]);\n      len += 1;\n    });\n  })\n  .expect(status.ok, done);",
+                      "err": {},
+                      "uuid": "1f141156-6552-4b94-aace-f857c6555565",
+                      "parentUUID": "0017cbe8-450c-4a30-8328-0128d8a77ecc",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "1f141156-6552-4b94-aace-f857c6555565"
+                  ],
+                  "failures": [],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 1729,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 20000
+                }
+              ],
+              "passes": [],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 20000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 20000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 20000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.3.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}

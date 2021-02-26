@@ -1,0 +1,26 @@
+{
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [ "plateNo", "driverName", "lat", "lng", "location", "lastUpdated" ],
+        "properties": {
+            "plateNo":  { 
+                "uniqueItems": true,
+                "enum": [ "X 19599", "O 41291", "I 93053", "P 33048", "P 33331", "I 66897", "C 31590", "Q 89697", "X 54992", "I 53457",
+                        "P 86578", "B 37262", "C 74914", "V 59968", "S 49276", "L 19034", "I 42046", "H 83296", "A 66081", "T 50237", "L 92214",
+                        "F 43764", "R 24994", "A 24403", "A 59618", "C 35447", "J 95558", "Y 46460", "D 26771", "G 76076", "A 29825", 
+                        "X 70109", "N 43426", "X 42412", "N 62746", "M 21753", "R 95145", "D 58760", "T 36944", "N 92677", "A 28636",
+                        "W 69506", "N 87111", "O 19439", "Y 27000", "N 18898", "J 55060", "V 23011", "X 94517", "N 26414" ] },
+            "driverName": { 
+                "type": "string", "pattern": "\\S+", "minLength": 5, "maxLength": 30,
+                "enum": [ "Wyatt Liam", "William Noah", "Thomas William", "Theodore James", "Sebastian Oliver", "Samuel Benjamin", "Ryan Elijah", "Owen Lucas", "Oliver Mason", "Noah Logan", "Nathan Alexander", "Michael Ethan", "Matthew Jacob", "Mateo Michael", "Mason Daniel", "Luke Henry", "Lucas Jackson ", "Logan Sebastian", "Lincoln Aiden", "Liam Matthew", "Levi Samuel", "Leo David", "Julian Joseph", "Joshua Carter", "Joseph Owen", "John Wyatt", "Jayden John", "Jaxon Jack", "James Luke", "Jacob Jayden", "Jackson Dylan", "Jack Grayson", "Isaac Levi", "Henry Isaac", "Grayson Gabriel", "Gabriel Julian", "Ethan Mateo", "Elijah Anthony", "Dylan Jaxon", "David Lincoln", "Daniel Joshua", "Christopher Christopher", "Carter Andrew", "Caleb Theodore", "Benjamin Caleb", "Asher Ryan", "Anthony Asher", "Andrew Nathan", "Alexander Thomas", "Aiden Leo" ] },
+            "lat": { "type": "number" },
+            "lng": { "type": "number" },
+            "location": { "type": "string" },
+            "imageURL": { "type": "string" },
+            "lastUpdated": {  "type": "string" }
+        }
+    }
+}

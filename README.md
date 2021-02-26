@@ -2,13 +2,19 @@
 
 ### Runner
 
-> Execute Postman collections
-
+1. Execute Postman collections
+      ```
       newman run Interview.postman_collection.json --suppress-exit-code 
+      ```
 
-<img src="https://i.imgur.com/uAwye99.png" width="620" height="360" />
+     <img src="https://i.imgur.com/uAwye99.png" width="620" height="360" />
 
 
-> Execute Supertest
 
+2. Execute Supertest
+
+      ```
       npm test
+      ```
+
+      <img src="https://i.imgur.com/22z5cOe.png" width="620" height="195" />

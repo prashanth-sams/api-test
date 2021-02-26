@@ -4,6 +4,7 @@
 
 1. Execute Postman collections
       ```
+      npm install -g newman
       newman run Interview.postman_collection.json --suppress-exit-code 
       ```
 
@@ -14,7 +15,7 @@
 2. Execute Supertest
 
       ```
-      npm test
+      npm install & npm test
       ```
 
       <img src="https://i.imgur.com/22z5cOe.png" width="620" height="195" />

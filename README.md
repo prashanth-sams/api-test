@@ -6,7 +6,7 @@
 1. Execute Postman collections
       ```
       npm install -g newman
-      newman run Interview.postman_collection.json --suppress-exit-code 1
+      newman run test.postman_collection.json --suppress-exit-code 1
       ```
 
      <img src="https://i.imgur.com/uAwye99.png" width="620" height="360" />

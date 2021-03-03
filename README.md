@@ -1,4 +1,5 @@
 # API Test
+> Basic API testing boilerplate project based on JavaScript
 
 ### Test Runner
 

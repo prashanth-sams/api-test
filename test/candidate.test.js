@@ -5,7 +5,7 @@ var fs = require('fs');
 var _ = require('underscore');
 
 
-describe('Interview API', function() {
+describe('Test API', function() {
   var status;
 
   status = {
